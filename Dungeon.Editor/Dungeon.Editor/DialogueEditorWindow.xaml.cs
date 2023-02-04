@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Dungeon.Editor
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DialogueEditorWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DialogueEditorWindow : Window
     {
-        public MainWindow()
+        public DialogueEditorWindow()
         {
             InitializeComponent();
         }
