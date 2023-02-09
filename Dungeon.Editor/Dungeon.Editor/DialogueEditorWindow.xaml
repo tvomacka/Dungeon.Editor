@@ -9,7 +9,8 @@
         Title="Dialogue Editor" Height="450" Width="800">
 
     <Grid>
-        <nodify:NodifyEditor ItemsSource="{Binding Nodes}">
+        <nodify:NodifyEditor ItemsSource="{Binding Nodes}" 
+                             Connections="{Binding Connections}">
             <nodify:NodifyEditor.DataContext>
                 <local:EditorViewModel />
             </nodify:NodifyEditor.DataContext>
