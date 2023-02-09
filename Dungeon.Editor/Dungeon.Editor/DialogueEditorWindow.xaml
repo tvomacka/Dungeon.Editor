@@ -38,6 +38,12 @@
                     </nodify:Node>
                 </DataTemplate>
             </nodify:NodifyEditor.ItemTemplate>
+            <nodify:NodifyEditor.ConnectionTemplate>
+                <DataTemplate DataType="{x:Type local:ConnectionViewModel}">
+                    <nodify:LineConnection Source="{Binding Source.Anchor}"
+                                           Target="{Binding Target.Anchor}" />
+                </DataTemplate>
+            </nodify:NodifyEditor.ConnectionTemplate>
         </nodify:NodifyEditor>
     </Grid>
 </Window>
