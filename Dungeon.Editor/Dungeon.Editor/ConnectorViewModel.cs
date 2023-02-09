@@ -16,6 +16,17 @@ namespace Dungeon.Editor
             get => _anchor;
         }
 
+        private bool _isConnected;
+        public bool IsConnected
+        {
+            set
+            {
+                _isConnected = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsConnected)));
+            }
+            get => _isConnected;
+        }
+
         public string Title { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
