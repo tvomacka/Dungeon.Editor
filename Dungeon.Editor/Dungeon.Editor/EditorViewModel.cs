@@ -8,7 +8,24 @@ namespace Dungeon.Editor
 
         public EditorViewModel()
         {
-            Nodes.Add(new NodeViewModel { Title = "Welcome" });
+            Nodes.Add(new NodeViewModel
+            {
+                Title = "Welcome",
+                Input = new ObservableCollection<ConnectorViewModel>
+                {
+                    new ConnectorViewModel
+                    {
+                        Title = "In"
+                    }
+                },
+                Output = new ObservableCollection<ConnectorViewModel>
+                {
+                    new ConnectorViewModel
+                    {
+                        Title = "Out"
+                    }
+                }
+            });
         }
     }
 }
