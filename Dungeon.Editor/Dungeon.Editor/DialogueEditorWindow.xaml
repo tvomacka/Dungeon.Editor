@@ -23,7 +23,7 @@
                         <nodify:Node.InputConnectorTemplate>
                             <DataTemplate DataType="{x:Type local:ConnectorViewModel}">
                                 <nodify:NodeInput Header="{Binding Title}"
-                                                  IsConnected="True"
+                                                  IsConnected="{Binding IsConnected}"
                                                   Anchor="{Binding Anchor, Mode=OneWayToSource}" />
                             </DataTemplate>
                         </nodify:Node.InputConnectorTemplate>
