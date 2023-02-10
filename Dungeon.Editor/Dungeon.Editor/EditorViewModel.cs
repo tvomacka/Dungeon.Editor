@@ -7,8 +7,12 @@ namespace Dungeon.Editor
         public ObservableCollection<NodeViewModel> Nodes { get; } = new ObservableCollection<NodeViewModel>();
         public ObservableCollection<ConnectionViewModel> Connections { get; } = new ObservableCollection<ConnectionViewModel>();
 
+        public PendingConnectionViewModel PendingConnection { get; }
+
         public EditorViewModel()
         {
+            PendingConnection = new PendingConnectionViewModel(this);
+
             var welcome = new NodeViewModel
             {
                 Title = "Welcome",
@@ -44,6 +48,11 @@ namespace Dungeon.Editor
             Nodes.Add(nodify);
 
             Connections.Add(new ConnectionViewModel(source: welcome.Output[0], target: nodify.Input[0]));
+        }
+
+        public void Connect(ConnectorViewModel source, ConnectorViewModel target)
+        {
+            Connections.Add(new ConnectionViewModel(source, target));
         }
     }
 }

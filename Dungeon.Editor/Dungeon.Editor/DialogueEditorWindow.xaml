@@ -10,7 +10,8 @@
 
     <Grid>
         <nodify:NodifyEditor ItemsSource="{Binding Nodes}" 
-                             Connections="{Binding Connections}">
+                             Connections="{Binding Connections}"
+                             PendingConnection="{Binding PendingConnection}">
             <nodify:NodifyEditor.DataContext>
                 <local:EditorViewModel />
             </nodify:NodifyEditor.DataContext>
@@ -44,6 +45,13 @@
                                            Target="{Binding Target.Anchor}" />
                 </DataTemplate>
             </nodify:NodifyEditor.ConnectionTemplate>
+            <nodify:NodifyEditor.PendingConnectionTemplate>
+                <DataTemplate DataType="{x:Type local:PendingConnectionViewModel}">
+                    <nodify:PendingConnection StartedCommand="{Binding StartCommand}"
+                                              CompletedCommand="{Binding FinishCommand}"
+                                              AllowOnlyConnectors="True" />
+                </DataTemplate>
+            </nodify:NodifyEditor.PendingConnectionTemplate>
         </nodify:NodifyEditor>
     </Grid>
 </Window>
