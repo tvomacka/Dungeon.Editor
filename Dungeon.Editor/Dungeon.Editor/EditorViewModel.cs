@@ -43,11 +43,7 @@ namespace Dungeon.Editor
             Nodes.Add(welcome);
             Nodes.Add(nodify);
 
-            Connections.Add(new ConnectionViewModel
-            {
-                Source = welcome.Output[0],
-                Target = nodify.Input[0]
-            });
+            Connections.Add(new ConnectionViewModel(source: welcome.Output[0], target: nodify.Input[0]));
         }
     }
 }
