@@ -8,4 +8,5 @@ Node-based tool for creating and editing dialogues. Allows for adding conditiona
 
 # Credits
 
-https://github.com/miroiu/nodify
+- [ ] Node visualisation by [Nodify](https://github.com/miroiu/nodify)
+- [ ] Refactoring of the code was done mainly with [ReSharper](https://jb.gg/OpenSourceSupport).
