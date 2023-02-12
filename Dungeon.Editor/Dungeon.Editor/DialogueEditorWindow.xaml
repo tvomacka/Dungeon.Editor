@@ -17,6 +17,13 @@
                 <local:EditorViewModel />
             </nodify:NodifyEditor.DataContext>
 
+            <nodify:NodifyEditor.ItemContainerStyle>
+                <Style TargetType="{x:Type nodify:ItemContainer}">
+                    <Setter Property="Location" 
+                            Value="{Binding Location}" />
+                </Style>
+            </nodify:NodifyEditor.ItemContainerStyle>
+
             <nodify:NodifyEditor.ItemTemplate>
                 <DataTemplate DataType="{x:Type local:NodeViewModel}">
                     <nodify:Node Header="{Binding Title}"

@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Dungeon.Editor
@@ -28,6 +29,7 @@ namespace Dungeon.Editor
             var welcome = new NodeViewModel
             {
                 Title = "Welcome",
+                Location = new Point(10, 10),
                 Input = new ObservableCollection<ConnectorViewModel>
                 {
                     new ConnectorViewModel
@@ -47,6 +49,7 @@ namespace Dungeon.Editor
             var nodify = new NodeViewModel
             {
                 Title = "To Nodify",
+                Location = new Point(200, 10),
                 Input = new ObservableCollection<ConnectorViewModel>
                 {
                     new ConnectorViewModel
