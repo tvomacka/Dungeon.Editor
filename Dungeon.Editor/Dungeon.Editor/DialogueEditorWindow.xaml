@@ -11,7 +11,8 @@
     <Grid>
         <nodify:NodifyEditor ItemsSource="{Binding Nodes}" 
                              Connections="{Binding Connections}"
-                             PendingConnection="{Binding PendingConnection}">
+                             PendingConnection="{Binding PendingConnection}"
+                             DisconnectConnectorCommand="{Binding DisconnectConnectorCommand}">
             <nodify:NodifyEditor.DataContext>
                 <local:EditorViewModel />
             </nodify:NodifyEditor.DataContext>
