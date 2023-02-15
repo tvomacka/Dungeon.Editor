@@ -33,11 +33,15 @@
                       Drawing="{StaticResource LargeGridGeometry}" />
     </Window.Resources>
 
-    <Grid>
-        <nodify:NodifyEditor ItemsSource="{Binding Nodes}" 
-                             Connections="{Binding Connections}"
-                             PendingConnection="{Binding PendingConnection}"
-                             DisconnectConnectorCommand="{Binding DisconnectConnectorCommand}">
+    <Grid Background="{StaticResource NodifyEditor.BackgroundBrush}">
+
+        <Grid Background="{StaticResource LargeGridLinesDrawingBrush}"
+              Panel.ZIndex="-2" />
+        <nodify:NodifyEditor x:Name="Editor" Background="{StaticResource SmallGridLinesDrawingBrush}" 
+                              ItemsSource="{Binding Nodes}" 
+                              Connections="{Binding Connections}"
+                              PendingConnection="{Binding PendingConnection}"
+                              DisconnectConnectorCommand="{Binding DisconnectConnectorCommand}">
             <nodify:NodifyEditor.DataContext>
                 <local:EditorViewModel />
             </nodify:NodifyEditor.DataContext>
