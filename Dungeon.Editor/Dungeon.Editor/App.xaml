@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Dungeon.Editor"
              StartupUri="DialogueEditorWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="pack://application:,,,/Nodify;component/Themes/Light.xaml" />
     </Application.Resources>
 </Application>
