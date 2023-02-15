@@ -9,17 +9,17 @@ namespace Dungeon.Editor
 {
     public class PendingConnectionViewModel
     {
-        private readonly EditorViewModel _editor;
+        private readonly DialogueViewModel dialogue;
         private ConnectorViewModel _source;
 
-        public PendingConnectionViewModel(EditorViewModel editor)
+        public PendingConnectionViewModel(DialogueViewModel dialogue)
         {
-            _editor = editor;
+            this.dialogue = dialogue;
             StartCommand = new DelegateCommand<ConnectorViewModel>(source => _source = source);
             FinishCommand = new DelegateCommand<ConnectorViewModel>(target =>
             {
                 if (target != null)
-                    _editor.Connect(_source, target);
+                    this.dialogue.Connect(_source, target);
             });
         }
 

@@ -43,7 +43,7 @@
                               PendingConnection="{Binding PendingConnection}"
                               DisconnectConnectorCommand="{Binding DisconnectConnectorCommand}">
             <nodify:NodifyEditor.DataContext>
-                <local:EditorViewModel />
+                <local:DialogueViewModel />
             </nodify:NodifyEditor.DataContext>
 
             <nodify:NodifyEditor.ItemContainerStyle>

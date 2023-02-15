@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace Dungeon.Editor
 {
-    public class EditorViewModel
+    public class DialogueViewModel
     {
         public ObservableCollection<NodeViewModel> Nodes { get; } = new ObservableCollection<NodeViewModel>();
         public ObservableCollection<ConnectionViewModel> Connections { get; } = new ObservableCollection<ConnectionViewModel>();
@@ -14,7 +14,7 @@ namespace Dungeon.Editor
 
         public ICommand DisconnectConnectorCommand { get; }
 
-        public EditorViewModel()
+        public DialogueViewModel()
         {
             DisconnectConnectorCommand = new DelegateCommand<ConnectorViewModel>(connector =>
             {
